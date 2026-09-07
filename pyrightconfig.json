@@ -1,0 +1,8 @@
+{
+  "venvPath": "python-api",
+  "venv": "venv",
+  "extraPaths": [
+    "python-api/venv/Lib/site-packages",
+    "python-api"
+  ]
+}

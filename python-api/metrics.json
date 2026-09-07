@@ -1,0 +1,39 @@
+{
+  "akurasi": "95.41%",
+  "precision": "95.0%",
+  "recall": "95.0%",
+  "f1_score": "95.5%",
+  "total_sample": 370,
+  "cm": {
+    "tp": 188,
+    "fn": 6,
+    "fp": 11,
+    "tn": 165
+  },
+  "classification_report": {
+    "negatif": {
+      "precision": "0.96",
+      "recall": "0.94",
+      "f1_score": "0.95",
+      "support": 176
+    },
+    "positif": {
+      "precision": "0.94",
+      "recall": "0.97",
+      "f1_score": "0.96",
+      "support": 194
+    },
+    "macro_avg": {
+      "precision": "0.95",
+      "recall": "0.95",
+      "f1_score": "0.95",
+      "support": 370
+    },
+    "weighted_avg": {
+      "precision": "0.95",
+      "recall": "0.95",
+      "f1_score": "0.95",
+      "support": 370
+    }
+  }
+}
