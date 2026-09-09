@@ -19,9 +19,36 @@ Keduanya berkomunikasi melalui HTTP REST API menggunakan variabel `PYTHON_API_UR
 
 ---
 
-## 2. Cara Deploy Python API (Pilih Salah Satu)
+## 2. Cara Deploy Python API
 
-### Opsi Utama: Koyeb.com (100% Gratis & TANPA KARTU KREDIT) ⭐ REKOMENDASI
+### Opsi: Railway.app (Sangat Stabil & Cepat) ⭐ PILIHAN UTAMA
+
+[Railway.app](https://railway.app) adalah platform cloud modern yang sangat andal dan mudah dikonfigurasi.
+
+#### Langkah-langkah di Railway:
+1. **Daftar / Login**:
+   - Buka [railway.app](https://railway.app) dan login menggunakan akun GitHub Anda.
+2. **Buat Projek Baru**:
+   - Klik tombol **+ New Project**.
+   - Pilih **Deploy from GitHub repo**.
+   - Pilih repository Anda: **`Gerrard567/talongkajaya-sentimen`**.
+3. **Atur Root Directory ke `python-api`**:
+   - Klik kotak layanan projek yang muncul di canvas Railway.
+   - Buka tab **Settings**.
+   - Cari bagian **Service** $\rightarrow$ **Root Directory**.
+   - Masukkan: `/python-api` lalu klik simpan/save.
+   - *(Railway akan otomatis mendeteksi `Dockerfile` dan `requirements.txt` yang sudah siap di dalam folder tersebut).*
+4. **Buat Domain Publik**:
+   - Masih di tab **Settings**, gulir ke bawah ke bagian **Networking** / **Public Networking**.
+   - Klik tombol **Generate Domain**.
+   - Railway akan memberikan URL publik, contohnya:
+     `https://talongkajaya-api-production-xxxx.up.railway.app`
+5. **Tes API**:
+   - Buka domain tersebut di browser. Jika muncul:
+     `{"message": "Sentiment Analysis API is running", "status": "Ready"}`
+     berarti AI Anda sudah resmi online di Railway!
+
+---
 
 [Koyeb.com](https://www.koyeb.com) adalah platform cloud modern yang sangat ramah pengguna karena **tidak meminta nomor kartu kredit/debit** untuk mendaftar dan menjalankan service gratis.
 
