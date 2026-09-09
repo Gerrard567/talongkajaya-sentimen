@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Login Administrator - CV Talongka Jaya</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -30,7 +31,7 @@
         </div>
 
         <div class="px-8 py-8">
-            <form action="{{ route('login') }}" method="POST" class="space-y-6">
+            <form action="/login" method="POST" class="space-y-6">
                 @csrf
                 
                 <div>

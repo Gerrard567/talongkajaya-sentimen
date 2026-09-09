@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Kritik & Saran Pelanggan - CV Talongka Jaya</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -35,7 +36,7 @@
 
         <!-- Form Content -->
         <div class="px-8 py-8">
-            <form action="{{ route('ulasan.public.store') }}" method="POST" class="space-y-6">
+            <form action="/kirim" method="POST" class="space-y-6">
                 @csrf
                 
                 <div>
