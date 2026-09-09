@@ -19,31 +19,46 @@ Keduanya berkomunikasi melalui HTTP REST API menggunakan variabel `PYTHON_API_UR
 
 ---
 
-## 2. Cara Deploy Python API ke Render.com (Gratis & Mudah)
+## 2. Cara Deploy Python API (Pilih Salah Satu)
 
-[Render.com](https://render.com) menyediakan tier gratis yang sangat cocok untuk menjalankan FastAPI.
+### Opsi Utama: Koyeb.com (100% Gratis & TANPA KARTU KREDIT) ⭐ REKOMENDASI
 
-### Langkah-langkah:
-1. **Push Projek ke GitHub**:
-   - Pastikan folder `python-api/` ikut ter-commit ke repository GitHub Anda (termasuk folder `models/` yang berisi `model_naive_bayes.pkl` dan `vectorizer.pkl`, serta file `Procfile` dan `requirements.txt`).
-2. **Buat Akun di Render**:
-   - Buka [render.com](https://render.com) dan login menggunakan akun GitHub Anda.
-3. **Buat Web Service Baru**:
-   - Klik **New +** $\rightarrow$ pilih **Web Service**.
-   - Hubungkan repository GitHub Anda.
-4. **Konfigurasi Web Service**:
-   - **Name**: `talongkajaya-api` (atau nama lain yang Anda inginkan)
-   - **Root Directory**: `python-api` *(PENTING: isi dengan `python-api`)*
-   - **Runtime**: `Python 3`
-   - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-   - **Plan Type**: `Free`
-5. **Deploy**:
-   - Klik **Deploy Web Service**.
-   - Tunggu hingga proses build selesai. Anda akan mendapatkan URL publik, contohnya:
-     `https://talongkajaya-api.onrender.com`
-6. **Tes API**:
-   - Buka URL tersebut di browser. Jika muncul pesan `{"message": "Sentiment Analysis API is running", "status": "Ready"}`, berarti API AI Anda sudah aktif di internet!
+[Koyeb.com](https://www.koyeb.com) adalah platform cloud modern yang sangat ramah pengguna karena **tidak meminta nomor kartu kredit/debit** untuk mendaftar dan menjalankan service gratis.
+
+#### Langkah-langkah di Koyeb:
+1. **Daftar Akun**:
+   - Buka [app.koyeb.com/auth/signup](https://app.koyeb.com/auth/signup) dan pilih **Sign up with GitHub**.
+2. **Buat Service Baru**:
+   - Klik tombol **Create Service** (atau **Create App**).
+   - Pada pilihan *Deployment Method*, pilih **GitHub**.
+   - Pilih repository Anda: **`Gerrard567/talongkajaya-sentimen`**.
+3. **Konfigurasi Service**:
+   - **Branch**: `main`
+   - **Root Directory**: ketik `python-api` *(PENTING)*
+   - **Builder**: Biarkan **Dockerfile** (otomatis terdeteksi) atau **Buildpack**.
+   - **Instance Type**: Pilih **Eco (Free)**.
+   - **Regions**: Pilih yang terdekat (misal: *Frankfurt* atau *Washington*).
+   - **Ports / Routing**: Pastikan internal port terisi **`8000`** (Protokol HTTP).
+   - **Service Name**: `talongkajaya-api` (atau nama lain yang Anda sukai).
+4. **Deploy**:
+   - Klik tombol hijau **Deploy**.
+   - Tunggu sekitar 1–2 menit hingga status berubah menjadi **Healthy** (hijau).
+   - Anda akan mendapatkan URL publik, contohnya:
+     `https://talongkajaya-api-username.koyeb.app`
+5. **Tes API**:
+   - Buka URL tersebut di browser. Jika muncul respons JSON:
+     `{"message": "Sentiment Analysis API is running", "status": "Ready"}`
+     berarti AI Anda sudah resmi online!
+
+---
+
+### Opsi Alternatif: Render.com (Perlu Kartu Debit/Kredit)
+
+Jika Anda memiliki kartu Visa/Mastercard dengan transaksi internasional aktif:
+1. Buka [render.com](https://render.com) $\rightarrow$ Login via GitHub.
+2. Klik **New +** $\rightarrow$ **Web Service** $\rightarrow$ Hubungkan repo `talongkajaya-sentimen`.
+3. Set **Root Directory**: `python-api`, **Language**: `Python 3`, **Build**: `pip install -r requirements.txt`, **Start**: `uvicorn main:app --host 0.0.0.0 --port $PORT`, Plan: **Free**.
+4. Selesaikan verifikasi dan deploy.
 
 ---
 
