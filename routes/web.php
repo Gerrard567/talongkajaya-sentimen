@@ -19,7 +19,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ProfileController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('ulasan.public.create');
 });
 
 // Authentication Routes
